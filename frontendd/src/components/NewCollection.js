@@ -6,7 +6,7 @@ function NewCollection() {
   const [new_collections, setNew_collections] = useState([]);
 
   useEffect(() => {
-    fetch('https://eshopping-backend1.onrender.com/newcollections')
+    fetch('https://eshopping-backend11.onrender.com')
       .then((response) => response.json())
       .then((data) => setNew_collections(data))
       .catch((error) => console.error('Error fetching collections:', error));

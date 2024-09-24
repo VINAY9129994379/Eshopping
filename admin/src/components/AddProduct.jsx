@@ -28,7 +28,7 @@ function AddProduct() {
         formData.append('product', image);
 
         try {
-            const uploadResponse = await fetch('https://eshopping-backend1.onrender.com/upload', {
+            const uploadResponse = await fetch('https://eshopping-backend11.onrender.com', {
                 method: 'POST',
                 body: formData
             });
@@ -38,7 +38,7 @@ function AddProduct() {
                 product.image = responseData.image_url;
                 console.log(product);
 
-                const addProductResponse = await fetch('https://eshopping-backend1.onrender.com/addproduct', {
+                const addProductResponse = await fetch('https://eshopping-backend11.onrender.com', {
                     method: 'POST',
                     headers: {
                         Accept: 'application/json',

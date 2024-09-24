@@ -16,7 +16,7 @@ function LoginSignup() {
   const login = async () => {
     console.log("Login Function Executed", formData);
     try {
-      const response = await fetch('https://eshopping-backend1.onrender.com/login', {
+      const response = await fetch('https://eshopping-backend11.onrender.com', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -40,7 +40,7 @@ function LoginSignup() {
   const signup = async () => {
     console.log("Signup Function Executed", formData);
     try {
-      const response = await fetch('https://eshopping-backend1.onrender.com/signup', {
+      const response = await fetch('https://eshopping-backend11.onrender.com', {
         method: 'POST',
         headers: {
           Accept: 'application/json',

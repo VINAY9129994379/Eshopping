@@ -7,7 +7,7 @@ function ListProduct() {
 
   const fetchInfo = async () => {
     try {
-      const response = await fetch('https://eshopping-backend1.onrender.com/allproducts');
+      const response = await fetch('https://eshopping-backend11.onrender.com');
       const data = await response.json();
       setAllProducts(data);
     } catch (error) {
@@ -20,7 +20,7 @@ function ListProduct() {
   }, []);
 
   const remove_product= async(id)=>{
-    await fetch ('https://eshopping-backend1.onrender.com/removeproduct',{
+    await fetch ('https://eshopping-backend11.onrender.com',{
     method:'POST',
     headers:{
       Accept:'application/json',

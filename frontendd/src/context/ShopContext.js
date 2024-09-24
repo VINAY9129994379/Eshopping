@@ -16,7 +16,7 @@ const ShopContextProvider = (props) => {
 
     useEffect(() => {
         // Fetch all products
-        fetch('https://eshopping-backend1.onrender.com/allproducts')
+        fetch('https://eshopping-backend11.onrender.com')
             .then((response) => response.json())
             .then((data) => setAll_product(data))
             .catch((error) => console.error('Error fetching products:', error));
@@ -24,7 +24,7 @@ const ShopContextProvider = (props) => {
         // If user is authenticated, fetch cart items
         const token = localStorage.getItem('auth-token');
         if (token) {
-            fetch('https://eshopping-backend1.onrender.com/getcart', {
+            fetch('https://eshopping-backend11.onrender.com', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
@@ -51,7 +51,7 @@ const ShopContextProvider = (props) => {
     
         // Perform fetch if the user is authenticated
         if (token) {
-            fetch('https://eshopping-backend1.onrender.com/addtocart', {
+            fetch('https://eshopping-backend11.onrender.com', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
@@ -87,7 +87,7 @@ const ShopContextProvider = (props) => {
     
         // Perform fetch if the user is authenticated
         if (token) {
-            fetch('https://eshopping-backend1.onrender.com/removefromcart', {
+            fetch('https://eshopping-backend11.onrender.com', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
